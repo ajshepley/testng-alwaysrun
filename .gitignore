@@ -1,0 +1,17 @@
+### Java ###
+*.class
+
+### Build ###
+
+/out/
+/build/
+.gradle
+
+### IDEA
+
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
+.idea/**/uiDesigner.xml
