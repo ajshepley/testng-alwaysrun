@@ -71,6 +71,8 @@ public class AnnotationAdjuster {
         // AnnotationInvocationHandler is hidden.
         final Field memberValueField = invocationHandler.getClass()
             .getDeclaredField("memberValues");
+
+        // TODO: Try using trySetAccessible() with Java9.
         memberValueField.setAccessible(true);
 
         @SuppressWarnings("unchecked") final Map<String, Object> memberValues =

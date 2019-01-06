@@ -12,13 +12,14 @@ import org.testng.annotations.ITestAnnotation;
  * true.
  *
  * You must specify this transformer manually in your testng.xml file:
+ * {@code
  *  <suite>
  *
  *   <listeners>
  *     <listener class-name="com.github.ajshepley.AlwaysRunAnnotationTransformer" />
  *   </listeners>
  *   ...
- *
+ * }
  * Or you can specify it in a service loader.
  */
 public class AlwaysRunAnnotationTransformer implements IAnnotationTransformer {
