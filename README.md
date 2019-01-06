@@ -41,11 +41,31 @@ ____
 
 The included Gradle4 wrappers can be used to build the project (`./gradlew` or `.\gradlew.bat`).
 
+Java 8 is required. See **Warning** below for more information.
+
 This repo is meant more as an illustration of how to work around this TestNG behaviour than to serve directly as a dependency.
 
 However, a classes dependency jar can be created using the `jar` task. This is included as a default build task.
 
 The TestNG version can be tweaked in the `ext` block in `build.gradle`.
+
+### Warning
+
+When building, the following warning may appear:
+
+```bash
+WARNING: An illegal reflective access operation has occurred
+...
+WARNING: All illegal access operations will be denied in a future release
+```
+
+This occurs because the methodology used in changing the annotation field uses cross-module reflective accessibility changes, and therefore will not function correctly in Java 9 and later.
+
+You can try using the flag `–illegal-access=permit` to force it to work.
+
+
+
+
 
 ____
 
