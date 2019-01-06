@@ -15,7 +15,7 @@ import org.testng.annotations.ITestAnnotation;
  *  <suite>
  *
  *   <listeners>
- *     <listener class-name="com.example.MyListener" />
+ *     <listener class-name="com.github.ajshepley.AlwaysRunAnnotationTransformer" />
  *   </listeners>
  *   ...
  *

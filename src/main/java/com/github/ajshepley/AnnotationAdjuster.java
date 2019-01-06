@@ -22,6 +22,17 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 
+/**
+ * AnnotationAdjuster
+ *
+ * This class will find @After and @Before configuration methods in a given class, and will
+ * reflectively change their alwaysRun value(s) to true.
+ *
+ * If anything fails, the exception is logged.
+ *
+ * @see AlwaysRunAnnotationTransformer
+ * @see AlwaysRunAnnotationTestListener
+ */
 public class AnnotationAdjuster {
 
   private static final Set<Class> CONFIGURATION_ANNOTATIONS = Stream.of(
